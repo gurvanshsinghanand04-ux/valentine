@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HAPPYYY VALENTINEE MY BABYYYY GURSAANJH ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #ffafbd, #ffc3a0);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section { padding: 80px 20px; }
+
+h1, h2 { font-family: 'Playfair Display', serif; }
+
+.hero h1 {
+    font-size: 3.8em;
+    animation: glow 2.5s ease-in-out infinite alternate;
+    text-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff; }
+    to   { text-shadow: 0 0 25px #ff5f7e; }
+}
+.hero p { font-size: 1.3em; opacity: 0.9; }
+
+.card {
+    background: rgba(255,255,255,0.2);
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+}
+.card:hover { transform: translateY(-10px) scale(1.02); }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+button {
+    background: linear-gradient(135deg, #ff1e56, #ff5f7e);
+    border: none;
+    color: white;
+    padding: 16px 35px;
+    font-size: 1.05em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+button:hover { transform: scale(1.1); }
+
+/* yes pulse */
+.yesBtn { animation: pulse 1.5s infinite; }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.hidden {
+    display: none;
+    margin-top: 25px;
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+
+/* hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.8;
+}
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* confetti */
+.confetti {
+    position: fixed;
+    font-size: 20px;
+    animation: pop 1.2s ease-out forwards;
+}
+@keyframes pop {
+    from { transform: scale(0); opacity: 1; }
+    to { transform: scale(2); opacity: 0; }
+}
+
+/* runaway no */
+#noBtn { position: relative; }
+
+footer { padding: 50px 20px; opacity: 0.8; }
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Gursaanjh ❤️</h1>
+    <p>This is not just a website.<br>This is my heart, written for you.</p>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>💌 A Letter From My Heart</h2>
+<button onclick="toggle('letter')">Open My Letter</button>
+<div id="letter" class="hidden">
+<p>
+My love Gursaanjh,<br><br>
+From the very first moment I saw you, something inside me quietly changed. I didn’t know what it was at first, but over time I realized it was care, LOVE and a feeling that made even ordinary days feel special. You have a way of turning simple moments into memories <br><br>
+You may not know this, but your presence brings a kind of peace that is hard to describe. When I think about you, I feel motivated to become a better version of myself. You inspire me to smile more, to believe more, and to hope more.<br><br>
+I admire the way you are your kindness, your strength, your smile, and the little things you do without even noticing. Everything about you feels genuine and beautiful. You make the world around you brighter just by being in it.<br><br>
+No matter what the future holds, I want you to know that you will always have a special place in my heart. I may not say everything perfectly, but my feelings for you are honest and true. I will always LOVE you, care for you, and wish for your happiness.<br><br>
+With all my heart,<br>
+<strong>Gurvansh ❤️</strong>
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>💖 Why I Love You</h2>
+<button onclick="toggle('reasons')">Show Me</button>
+<div id="reasons" class="hidden">
+<p>I love the way your smile can change the mood of a whole room.</p>
+<p>I love how your laugh feels like comfort and happiness together.</p>
+<p>I love how you make people feel seen and valued.</p>
+<p>I love how being around you makes everything feel lighter.</p>
+<p>I love everything that makes you, you.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>🌹 One Thing I Want You To Know</h2>
+<button onclick="toggle('promise')">Read This</button>
+<div id="promise" class="hidden">
+<p>
+I Love youuu the mostestesttsts everrrr myyy babyyyy my darlingggg lovee youuuu tooo az-14 and backkkkkkkkkkkk, this careless boy cares a lottt about youuuuuuuuu
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>💍 The Most Important Question</h2>
+<p>Gursaanjh, will you be my Valentine?</p>
+<button class="yesBtn" onclick="yes()">YES 💕</button>
+<button id="noBtn" onmouseover="runAway()">NO 🙈</button>
+<div id="answer" class="hidden"></div>
+</div>
+</section>
+
+<footer>Made with endless love 💞</footer>
+
+<script>
+function toggle(id){document.getElementById(id).classList.toggle("hidden");}
+
+function yes(){
+const a=document.getElementById("answer");
+a.classList.remove("hidden");
+a.innerHTML="You just gave me a reason to smile every single day. Your yes means more to me than I can ever explain. I promise to respect you, care for you, and always wish the best for you. Thank you for making my world feel brighter, warmer, and full of hope 💖";
+confetti();
+}
+
+function runAway(){
+const b=document.getElementById("noBtn");
+b.style.position="fixed";
+b.style.left=Math.random()*(window.innerWidth-b.offsetWidth)+"px";
+b.style.top=Math.random()*(window.innerHeight-b.offsetHeight)+"px";
+}
+
+function confetti(){
+for(let i=0;i<40;i++){
+const c=document.createElement("div");
+c.className="confetti";
+c.innerHTML="💖";
+c.style.left=Math.random()*100+"vw";
+c.style.top=Math.random()*100+"vh";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),1200);
+}
+}
+
+function createHeart(){
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*3)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+}
+setInterval(createHeart,250);
+
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".reveal").forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add("active");
+}
+});
+});
+</script>
+
+</body>
+</html>
